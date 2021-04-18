@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{%block title %}
+    Register Page
+{% endblock %}
+
+
+{% block content %}
+    <div class="md:container h-full flex flex-col items-center justify-center m-auto">
+        <div class="pt-52 text-2xl md:text-5xl text-blue-300">
+            <h1>Create a new account</h1>
+        </div>
+        <form method="POST" class="flex flex-col items-center text-lg md:text-2xl form-register p-8 w-full m-auto" style="color:white">
+            {{ form.username.label(class="pb-2") }}
+            {{ form.username(class=" border text-gray-800 border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent  form-control h-12 rounded-lg w-2/4", placeholder="username") }}
+
+            {{ form.email_address.label(class="pb-2") }}
+            {{ form.email_address(class=" border text-gray-800 border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent  form-control h-12 rounded-lg w-2/4", placeholder="Email Address") }}
+            
+            {{ form.password1.label(class="pb-2") }}
+            {{ form.password1(class=" border text-gray-800 border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent  form-control h-12 rounded-lg w-2/4", placeholder="Password") }}
+
+            {{ form.password2.label(class="pb-2") }}
+            {{ form.password2(class=" border text-gray-800 border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent  form-control h-12 rounded-lg w-2/4", placeholder="Confirm Password") }}
+            
+            <br>
+            {{ form.submit(class="shadow-2x text-lg bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50 rounded-lg w-36 h-10") }}
+
+        </form>
+    </div>
+{% endblock %}
