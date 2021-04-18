@@ -5,3 +5,4 @@ package.json
 postcss.config.js
 tailwind.config.js
 venv/
+node_modules
