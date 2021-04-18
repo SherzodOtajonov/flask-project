@@ -23,18 +23,20 @@
     <!-- navbar -->
     <nav class="bg-gray-700 h-12">
         <ul class="flex w-full justify-between">
-            <div class="flex my-3 w-1/4 justify-around">
+            <div class="flex my-3 md:w-1/4 md:justify-around">
             <li class="px-3">Flask Market</li>
             <li>
-                <a class="hover:text-yellow-400 transition" href="{{ url_for('home_page') }}">Home</a>
+                <a class="hover:text-yellow-400 transition pr-2" href="{{ url_for('home_page') }}">Home</a>
             </li>
             <li>
                 <a class="hover:text-yellow-400 transition" href="{{ url_for('market_page') }}">Market</a>
             </li>
             </div >
-            <div class="flex my-3 w-1/6 justify-around">
-            <li>Login</li>
-            <li>Register</li>
+            <div class="flex my-3 md:w-1/6 md:justify-around">
+            <li class="pr-2">Login</li>
+            <li>
+                <a class="hover:text-yellow-400 transition" href="{{ url_for('register_page') }}">Register</a>
+            </li>
             </div>
         </ul>
     </nav>
