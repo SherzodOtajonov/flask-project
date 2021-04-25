@@ -40,6 +40,25 @@
             </div>
         </ul>
     </nav>
+
+    
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+            <div class="alert container flex items-center justify-center">
+                <div class="p-2 flex-auto bg-indigo-800 items-center text-indigo-100 leading-none flex lg:inline-flex" role="alert">
+
+                    <span class="font-semibold mr-2 text-center flex-auto">{{ message }}</span>
+                    <button type="button" data-dismiss="alert" aira-label="Close" >
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+
+                </div>
+            </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
     <!-- main content -->
     {% block content %}
 
