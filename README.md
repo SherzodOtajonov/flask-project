@@ -1,1 +1,1 @@
-### project i am making(following freecodecamp tutorial) to learn flask
+### project i am making to learn flask(incomplete)
